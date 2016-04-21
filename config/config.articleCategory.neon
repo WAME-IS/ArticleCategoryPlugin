@@ -1,0 +1,9 @@
+services:
+	ArticlesOfCategory:
+		class: Wame\ArticleCategoryPlugin\Controls\ArticlesOfCategory
+		setup:
+			- injectRepository
+	CategoriesOfArticle:
+		class: Wame\ArticleCategoryPlugin\Controls\CategoriesOfArticle
+		setup:
+			- injectRepository
