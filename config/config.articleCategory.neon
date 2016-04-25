@@ -1,4 +1,10 @@
 services:
+	# Entities
+	- Wame\ArticleCategoryPlugin\Entities\ArticleCategoryEntity
+
+	# Repositories
+	- Wame\ArticleCategoryPlugin\Repositories\ArticleCategoryRepository
+
 	ArticlesOfCategory:
 		class: Wame\ArticleCategoryPlugin\Controls\ArticlesOfCategory
 		setup:
@@ -7,3 +13,8 @@ services:
 		class: Wame\ArticleCategoryPlugin\Controls\CategoriesOfArticle
 		setup:
 			- injectRepository
+
+doctrine:
+	metadata:
+		Wame\ArticleCategoryPlugin\Entities: %appDir%/../vendor/wame/ArticleCategoryPlugin/entities
+		Wame\ArticleCategoryPlugin\Repositories: %appDir%/../vendor/wame/ArticleCategoryPlugin/repositories

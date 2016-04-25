@@ -4,6 +4,7 @@ namespace Wame\ArticleCategoryPlugin\Controls;
 
 use Nette\Application\UI\Control;
 
+use Wame\ArticleCategoryPlugin\Repositories\ArticleCategoryRepository;
 use Wame\CategoryModule\Repositories\CategoryItemRepository;
 
 class BaseControl extends Control
@@ -11,12 +12,16 @@ class BaseControl extends Control
 	/** @var CategoryItemRepository @inject */
 	public $categoryItemRepository;
 	
+	/** @var ArticleCategoryRepository @inject */
+	public $articleCategoryRepository;
+	
 	protected $items;
 	
 	protected $lang;
 	
-	public function injectRepository(CategoryItemRepository $categoryItemRepository)
+	public function injectRepository(ArticleCategoryRepository $articleCategoryRepository, CategoryItemRepository $categoryItemRepository)
 	{
+		$this->articleCategoryRepository = $articleCategoryRepository;
 		$this->categoryItemRepository = $categoryItemRepository;
 		$this->lang = $this->categoryItemRepository->lang;
 	}
