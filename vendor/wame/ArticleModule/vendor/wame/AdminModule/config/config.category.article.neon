@@ -1,0 +1,6 @@
+services:
+
+	# Create category in administration form
+	CreateArticleForm:
+		setup:
+			- addFormContainer(Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Forms\CategoryTreeContainer, 'CategoryTreeFormContainer')
