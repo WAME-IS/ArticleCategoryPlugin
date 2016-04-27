@@ -1,6 +1,14 @@
 services:
 
+	# Factories
+	- Wame\ArticleCategoryPlugin\Forms\ICategoryTreeFormContainerFactory
+
 	# Create category in administration form
 	CreateArticleForm:
 		setup:
-			- addFormContainer(Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Forms\CategoryTreeContainer, 'CategoryTreeFormContainer')
+			- addFormContainer(Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Forms\CategoryTreeContainer(), 'CategoryTreeFormContainer', 50)
+
+doctrine:
+	metadata:
+		Wame\ArticleModule\Entities: %appDir%/../vendor/wame/ArticleModule/entities
+		Wame\ArticleModule\Repositories: %appDir%/../vendor/wame/ArticleModule/repositories

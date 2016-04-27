@@ -5,6 +5,14 @@ services:
 	# Repositories
 	- Wame\ArticleCategoryPlugin\Repositories\ArticleCategoryRepository
 
+	# Factories
+	- Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Forms\ICategoryTreeFormContainerFactory
+
+	# Create category in administration form
+	CreateArticleForm:
+		setup:
+			- addFormContainer(Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
+
 	ArticlesOfCategory:
 		class: Wame\ArticleCategoryPlugin\Controls\ArticlesOfCategory
 		setup:
