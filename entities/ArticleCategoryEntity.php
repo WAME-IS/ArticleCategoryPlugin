@@ -6,7 +6,7 @@ use \Wame\Core\Entities\BaseEntity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Table(name="wame_category_item")
+ * @ORM\Table(name="wame_category_item_test")
  * @ORM\Entity
  */
 class ArticleCategoryEntity extends BaseEntity 
@@ -37,5 +37,5 @@ class ArticleCategoryEntity extends BaseEntity
 	 * @ORM\JoinColumn(name="item_id", referencedColumnName="id")
 	 */
 	protected $articles;
-
+	
 }

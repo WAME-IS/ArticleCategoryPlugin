@@ -12,11 +12,6 @@ class ArticlesOfCategory extends BaseControl
 	{
 		$this->setTemplate('articles_of_category');
 		
-		
-//		$articleCategory = $this->articleCategoryRepository->getArticles(['category_id' => $categoryId]);
-//		
-//		dump($articleCategory->articles); exit;
-		
 		$items = $this->categoryItemRepository->getItems('articles', $categoryId);
 		
 		$this->template->categoryId = $categoryId;

@@ -19,6 +19,9 @@ class BaseControl extends Control
 	
 	protected $lang;
 	
+	/** @var integer */
+	protected $id;
+	
 	public function injectRepository(ArticleCategoryRepository $articleCategoryRepository, CategoryItemRepository $categoryItemRepository)
 	{
 		$this->articleCategoryRepository = $articleCategoryRepository;
@@ -30,6 +33,11 @@ class BaseControl extends Control
 	{
 		$this->template->setFile(__DIR__ . '/templates/' . $templateName . '.latte');
 		$this->template->lang = $this->lang;
+	}
+	
+	public function setId($id)
+	{
+		$this->id = $id;
 	}
 	
 }

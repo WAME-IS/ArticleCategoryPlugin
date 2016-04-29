@@ -4,15 +4,8 @@ namespace Wame\ArticleCategoryPlugin\Controls;
 
 class CategoriesOfArticle extends BaseControl
 {
-	private $id;
-	
 	public function __construct() {
 		parent::__construct();
-	}
-	
-	public function setId($id)
-	{
-		$this->id = $id;
 	}
 	
 	public function render($articleId = null)
