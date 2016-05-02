@@ -6,8 +6,6 @@ use Wame\MenuModule\Models\Item;
 
 class AdminMenuItem
 {	
-	public $name = 'category';
-
     /** @var \Nette\Application\LinkGenerator */
 	private $linkGenerator;
 	
@@ -19,7 +17,7 @@ class AdminMenuItem
 	public function addItem()
 	{
 		$item = new Item();
-		$item->setName('articles');
+		$item->setName('article');
 		
 		$item->addNode($this->categoriesDefault(), 'categories');
 		
@@ -29,6 +27,7 @@ class AdminMenuItem
 	private function categoriesDefault()
 	{
 		$item = new Item();
+		$item->setName('article-categories');
 		$item->setTitle(_('Categories'));
 		$item->setLink($this->linkGenerator->link('Admin:Category:', ['id' => null, 'type' => 'articles']));
 		
