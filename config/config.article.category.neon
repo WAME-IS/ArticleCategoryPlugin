@@ -3,7 +3,7 @@ services:
 	- {class: Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Events\CategoryListener, tags: [run]}
 
 	# Entities
-	- Wame\ArticleCategoryPlugin\Entities\ArticleCategoryEntity
+#	- Wame\ArticleCategoryPlugin\Entities\ArticleCategoryEntity
 
 	# Repositories
 	- Wame\ArticleCategoryPlugin\Repositories\ArticleCategoryRepository
@@ -25,7 +25,7 @@ services:
 		setup:
 			- injectRepository
 
-doctrine:
-	metadata:
-		Wame\ArticleCategoryPlugin\Entities: %appDir%/../vendor/wame/ArticleCategoryPlugin/entities
-		Wame\ArticleCategoryPlugin\Repositories: %appDir%/../vendor/wame/ArticleCategoryPlugin/repositories
+#doctrine:
+#	metadata:
+#		Wame\ArticleCategoryPlugin\Entities: %appDir%/../vendor/wame/ArticleCategoryPlugin/entities
+#		Wame\ArticleCategoryPlugin\Repositories: %appDir%/../vendor/wame/ArticleCategoryPlugin/repositories
