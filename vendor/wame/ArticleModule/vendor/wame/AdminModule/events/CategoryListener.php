@@ -27,14 +27,14 @@ class CategoryListener extends Object
 	{
 		$values['categories'] = $form->getHttpData($form::DATA_TEXT, 'categories[]');
 		
-//		dump($values); exit;
-		
 		$this->categoryRepository->attachAll($entity, 'article', $values->categories);
 	}
 	
-	public function onUpdate()
+	public function onUpdate($form, $values, $articleEntity)
 	{
+		$values['categories'] = $form->getHttpData($form::DATA_TEXT, 'categories[]');
 		
+		$this->categoryRepository->sync($articleEntity, 'article', $values->categories);
 	}
 	
 	public function onDelete()
