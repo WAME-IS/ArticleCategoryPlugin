@@ -2,7 +2,7 @@
 
 namespace Wame\ArticleCategoryPlugin\Repositories;
 
-use Wame\ArticleCategoryPlugin\Entities\ArticleCategoryEntity;
+//use Wame\ArticleCategoryPlugin\Entities\ArticleCategoryEntity;
 use Wame\ArticleModule\Entities\ArticleEntity;
 use Wame\ArticleModule\Entities\ArticleLangEntity;
 use Wame\CategoryModule\Entities\CategoryEntity;
@@ -12,8 +12,8 @@ use Wame\UserModule\Entities\UserEntity;
 class ArticleCategoryRepository extends \Wame\Core\Repositories\BaseRepository
 {
 	
-	/** @var ArticleCategoryEntity */
-	private $articleCategoryEntity;
+//	/** @var ArticleCategoryEntity */
+//	private $articleCategoryEntity;
 	
 //	/** @var ArticleEntity */
 //	private $articleEntity;
@@ -32,7 +32,7 @@ class ArticleCategoryRepository extends \Wame\Core\Repositories\BaseRepository
 	) {
 		parent::__construct($container, $entityManager, $translator, $user);
 		
-		$this->articleCategoryEntity = $this->entityManager->getRepository(ArticleCategoryEntity::class);
+//		$this->articleCategoryEntity = $this->entityManager->getRepository(ArticleCategoryEntity::class);
 //		$this->articleEntity = $this->entityManager->getRepository(ArticleEntity::class);
 //		$this->categoryEntity = $this->entityManager->getRepository(CategoryEntity::class);
 		$this->userEntity = $this->entityManager->getRepository(UserEntity::class)->findOneBy(['id' => $user->id]);
@@ -46,11 +46,11 @@ class ArticleCategoryRepository extends \Wame\Core\Repositories\BaseRepository
 	
 	public function getArticles($criteria = null)
 	{
-		$articleCategoryEntity = $this->articleCategoryEntity->findOneBy($criteria);
+//		$articleCategoryEntity = $this->articleCategoryEntity->findOneBy($criteria);
 		
 //		dump($articleCategoryEntity); exit;
 		
-		return $articleCategoryEntity;
+//		return $articleCategoryEntity;
 		
 //		return $articleCategoryEntity->articles;
 	}
