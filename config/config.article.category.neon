@@ -30,11 +30,6 @@ services:
 		setup:
 			- injectRepository
 
-	ArticleListForm:
-		setup:
-			- addFormContainer(Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
-#			- addFormContainer(Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Forms\LimitFormContainer(), 'LimitFormContainer', 50)
-
 #doctrine:
 #	metadata:
 #		Wame\ArticleCategoryPlugin\Entities: %appDir%/../vendor/wame/ArticleCategoryPlugin/entities
