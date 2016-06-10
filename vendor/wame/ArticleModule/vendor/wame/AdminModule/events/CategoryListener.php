@@ -27,14 +27,14 @@ class CategoryListener extends Object
 	{
 		$values['categories'] = $form->getHttpData($form::DATA_TEXT, 'categories[]');
 		
-		$this->categoryRepository->attachAll($entity, 'article', $values->categories);
+		$this->categoryRepository->attachAll($entity, $values->categories);
 	}
 	
 	public function onUpdate($form, $values, $articleEntity)
 	{
-		$values['categories'] = $form->getHttpData($form::DATA_TEXT, 'categories[]');
+		$values['categories'] = $form->getHttpData($form::DATA_TEXT, 'categories');
 		
-		$this->categoryRepository->sync($articleEntity, 'article', $values->categories);
+		$this->categoryRepository->sync($articleEntity, explode(",", $values->categories));
 	}
 	
 	public function onDelete()
@@ -43,9 +43,3 @@ class CategoryListener extends Object
 	}
 
 }
-
-/**
- * TODO:
- * 
- * - dat tam ID ... neriesit ze dump ma prazdne
- */

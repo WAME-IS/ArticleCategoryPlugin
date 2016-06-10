@@ -17,7 +17,7 @@ class CategoryTreeFormContainer extends \Wame\CategoryModule\Forms\CategoryTreeF
 	public function __construct(CategoryRepository $categoryRepository, CategoryItemRepository $categoryItemRepository, \Wame\Utils\HttpRequest $httpRequest) {
 		parent::__construct($categoryRepository, $categoryItemRepository, $httpRequest);
 		
-		$this->type = 'articles';
+		$this->type = 'article';
 	}
 	
 }
