@@ -41,7 +41,7 @@ class AdminMenuItem implements \Wame\MenuModule\Models\IMenuItem
 		$item = new Item();
 		$item->setName('article-categories');
 		$item->setTitle(_('Categories'));
-		$item->setLink($this->linkGenerator->link('Admin:Category:', ['id' => null, 'type' => 'article']));
+		$item->setLink($this->linkGenerator->link('Admin:Category:', ['id' => 'article']));
 		
 		return $item->getItem();
 	}

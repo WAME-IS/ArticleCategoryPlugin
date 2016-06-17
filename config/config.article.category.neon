@@ -20,4 +20,4 @@ services:
 
 	CategoryManager:
 		setup:
-			- add('article')
+			- addType(Wame\ArticleCategoryPlugin\Models\Category\Types\ArticleCategoryType())
