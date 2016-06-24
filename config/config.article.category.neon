@@ -1,4 +1,6 @@
 services:
+	- Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Forms\ICategoryTreeFormContainerFactory
+
 	# Events
 	- {class: Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Events\CategoryListener, tags: [run]}
 
