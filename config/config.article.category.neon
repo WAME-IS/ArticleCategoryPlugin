@@ -20,7 +20,7 @@ services:
 #			- addFormContainer(Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
 #			- addFormContainer(Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Forms\LimitFormContainer(), 'LimitFormContainer', 50)
 
-    act:
+    ArticleCategoryType:
         class: Wame\ArticleCategoryPlugin\Models\Category\Types\ArticleCategoryType
         tags: [run]
 
