@@ -1,24 +1,17 @@
 services:
-    - Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Forms\ICategoryTreeFormContainerFactory
-
-    # Events
-    - {class: Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Events\CategoryListener, tags: [run]}
-
-    # Create category in administration form
-    CreateArticleForm:
-        setup:
-            - addFormContainer(Wame\ArticleCategoryPlugin\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
+	# Create category in administration form
+	CreateArticleForm:
+		setup:
+			- addFormContainer(Wame\ArticleCategoryPlugin\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
 
     # Create category in administration form
     EditArticleForm:
         setup:
             - addFormContainer(Wame\ArticleCategoryPlugin\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
 
-    ArticleListForm:
-        setup:
-            - addFormContainer(Wame\ArticleCategoryPlugin\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
-#			- addFormContainer(Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
-#			- addFormContainer(Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Forms\LimitFormContainer(), 'LimitFormContainer', 50)
+	ArticleListForm:
+		setup:
+			- addFormContainer(Wame\ArticleCategoryPlugin\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
 
     ArticleCategoryType:
         class: Wame\ArticleCategoryPlugin\Models\Category\Types\ArticleCategoryType
