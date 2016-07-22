@@ -1,11 +1,11 @@
 <?php
 
-namespace Wame\ArticleCategoryPlugin\Models\Category\Types;
+namespace Wame\ArticleCategoryPlugin\Vendor\Wame\CategoryModule\Registers\Types;
 
 use Wame\EntityModifier\Model\EntityModifier;
 use Wame\EntityModifier\Model\FieldDefinition;
 
-class ArticleCategoryType extends \Wame\CategoryModule\Models\Type\CategoryType
+class ArticleCategoryType extends \Wame\CategoryModule\Registers\Types\CategoryType
 {
 	public function __construct(EntityModifier $entityModifier)
     {

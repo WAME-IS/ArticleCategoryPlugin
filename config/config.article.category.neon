@@ -13,10 +13,6 @@ services:
         setup:
             - addFormContainer(Wame\ArticleCategoryPlugin\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
 
-    ArticleCategoryType:
-        class: Wame\ArticleCategoryPlugin\Models\Category\Types\ArticleCategoryType
-        tags: [run]
-
-    CategoryManager:
+    CategoryRegister:
         setup:
-            - addType(Wame\ArticleCategoryPlugin\Models\Category\Types\ArticleCategoryType())
+            - add(Wame\ArticleCategoryPlugin\Vendor\Wame\CategoryModule\Registers\Types\ArticleCategoryType())
