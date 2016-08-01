@@ -2,10 +2,11 @@
 
 namespace Wame\ArticleCategoryPlugin\Vendor\Wame\CategoryModule\Registers\Types;
 
+use Wame\ArticleModule\Entities\ArticleEntity;
+use Wame\CategoryModule\Registers\Types\CategoryType;
 use Wame\EntityModifier\Model\EntityModifier;
-use Wame\EntityModifier\Model\FieldDefinition;
 
-class ArticleCategoryType extends \Wame\CategoryModule\Registers\Types\CategoryType
+class ArticleCategoryType extends CategoryType
 {
 	public function __construct(EntityModifier $entityModifier)
     {
@@ -30,7 +31,7 @@ class ArticleCategoryType extends \Wame\CategoryModule\Registers\Types\CategoryT
 	
 	public function getClassName()
     {
-		return \Wame\ArticleModule\Entities\ArticleEntity::class;
+		return ArticleEntity::class;
 	}
 	
 }
