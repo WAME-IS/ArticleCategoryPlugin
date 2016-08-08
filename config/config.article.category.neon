@@ -1,18 +1,4 @@
 services:
-    # Create category in administration form
-    CreateArticleForm:
-        setup:
-            - addFormContainer(Wame\ArticleCategoryPlugin\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
-
-    # Create category in administration form
-    EditArticleForm:
-        setup:
-            - addFormContainer(Wame\ArticleCategoryPlugin\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
-
-    ArticleListForm:
-        setup:
-            - addFormContainer(Wame\ArticleCategoryPlugin\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
-
     CategoryRegister:
         setup:
             - add(Wame\ArticleCategoryPlugin\Vendor\Wame\CategoryModule\Registers\Types\ArticleCategoryType())

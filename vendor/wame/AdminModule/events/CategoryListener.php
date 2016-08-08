@@ -1,6 +1,6 @@
 <?php
 
-namespace Wame\ArticleCategoryPlugin\Wame\ArticleModule\Wame\AdminModule\Events;
+namespace Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Events;
 
 use Nette\Object;
 use Wame\ArticleModule\Repositories\ArticleRepository;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Wame\ArticleCategoryPlugin\Forms;
+namespace Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Forms;
 
 use Wame\DynamicObject\Forms\BaseFormContainer;
 use Wame\CategoryModule\Repositories\CategoryRepository;
