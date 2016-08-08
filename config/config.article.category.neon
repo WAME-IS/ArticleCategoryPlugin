@@ -2,3 +2,8 @@ services:
     CategoryRegister:
         setup:
             - add(Wame\ArticleCategoryPlugin\Vendor\Wame\CategoryModule\Registers\Types\ArticleCategoryType())
+
+#entityModifier:
+#    traits:
+#    - {class: Wame\ArticleModule\Entities\ArticleEntity, trait: Wame\ArticleCategoryPlugin\Entities\Columns\Category}
+#    - {class: Wame\CategoryModule\Entities\CategoryEntity, trait: Wame\ArticleCategoryPlugin\Entities\Columns\Article}

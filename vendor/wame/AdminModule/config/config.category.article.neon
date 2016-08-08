@@ -17,9 +17,3 @@ services:
     ArticleListForm:
         setup:
             - addFormContainer(Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
-
-
-entityModifier:
-    traits:
-    - {class: Wame\ArticleModule\Entities\ArticleEntity, trait: Wame\ArticleCategoryPlugin\Entities\Columns\Category}
-    - {class: Wame\CategoryModule\Entities\CategoryEntity, trait: Wame\ArticleCategoryPlugin\Entities\Columns\Article}
