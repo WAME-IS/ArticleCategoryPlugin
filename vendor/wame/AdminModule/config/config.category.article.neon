@@ -3,6 +3,7 @@ services:
 
     # Events
     - {class: Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Events\CategoryListener, tags: [run]}
+    - {class: Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Events\ArticleListCategoryListener, tags: [run]}
 
     # Forms
     CreateArticleForm:
