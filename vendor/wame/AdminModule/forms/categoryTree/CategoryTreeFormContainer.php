@@ -2,7 +2,6 @@
 
 namespace Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Forms;
 
-use Wame\DynamicObject\Forms\BaseFormContainer;
 use Wame\CategoryModule\Repositories\CategoryRepository;
 use Wame\CategoryModule\Repositories\CategoryItemRepository;
 
@@ -14,10 +13,17 @@ interface ICategoryTreeFormContainerFactory
 
 class CategoryTreeFormContainer extends \Wame\CategoryModule\Forms\CategoryTreeFormContainer
 {
-	public function __construct(CategoryRepository $categoryRepository, CategoryItemRepository $categoryItemRepository, \Wame\Utils\HttpRequest $httpRequest) {
+    const TYPE = 'article';
+    
+    
+	public function __construct(
+        CategoryRepository $categoryRepository, 
+        CategoryItemRepository $categoryItemRepository, 
+        \Wame\Utils\HttpRequest $httpRequest
+    ) {
 		parent::__construct($categoryRepository, $categoryItemRepository, $httpRequest);
 		
-		$this->type = 'article';
+		$this->type = self::TYPE;
 	}
 	
 }
