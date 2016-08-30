@@ -44,11 +44,11 @@ class ArticleListCategoryListener extends Object
 	
 	public function onUpdate($form, $values, $componentEntity)
 	{
-        if(isset($values['categories'])) {
-            $values['categories'] = $form->getHttpData($form::DATA_TEXT, 'categories');
-        }
+        $values['categories'] = $form->getHttpData($form::DATA_TEXT, 'categories');
         
-        $componentEntity->setParameters($this->getParams($values, $componentEntity->getParameters()));
+        if(isset($values['categories'])) {
+            $componentEntity->setParameters($this->getParams($values, $componentEntity->getParameters()));
+        }
 	}
 	
 	public function onDelete()
