@@ -36,18 +36,41 @@ class ArticleListCategoryListener extends Object
 	public function onCreate($form, $values, $componentEntity) 
 	{
 		$values['categories'] = $form->getHttpData($form::DATA_TEXT, 'categories');
-        $componentEntity->setParameters(['categories' => explode(',', $values['categories'])]);
+        
+        if(isset($values['categories'])) {
+            $componentEntity->setParameters($this->getParams($values, $componentEntity->getParameters()));
+        }
 	}
 	
 	public function onUpdate($form, $values, $componentEntity)
 	{
-		$values['categories'] = $form->getHttpData($form::DATA_TEXT, 'categories');
-        $componentEntity->setParameters(['categories' => explode(',', $values['categories'])]);
+        $values['categories'] = $form->getHttpData($form::DATA_TEXT, 'categories');
+        
+        if(isset($values['categories'])) {
+            $componentEntity->setParameters($this->getParams($values, $componentEntity->getParameters()));
+        }
 	}
 	
 	public function onDelete()
 	{
 		
+	}
+    
+    
+    /**
+	 * Get parameters
+	 * 
+	 * @param array $values
+	 * @param array $parameters
+	 * @return array
+	 */
+	private function getParams($values, $parameters = [])
+	{
+		$array = [
+			'categories' => explode(',', $values['categories'])
+		];
+		
+		return array_replace($parameters, $array);
 	}
 
 }
