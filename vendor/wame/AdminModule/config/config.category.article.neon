@@ -18,3 +18,8 @@ services:
     ArticleListForm:
         setup:
             - addFormContainer(Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
+
+    # Grids
+    ArticleGrid:
+        setup:
+            - add(Wame\CategoryModule\Grids\GroupActions\AddCategorySelected(), null, {priority: 90})
