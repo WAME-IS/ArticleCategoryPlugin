@@ -5,6 +5,10 @@ services:
     - {class: Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Events\CategoryListener, tags: [run]}
     - {class: Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Events\ArticleListCategoryListener, tags: [run]}
 
+    Admin.ArticleFormBuilder:
+        setup:
+            - add(@Wame\CategoryModule\Forms\Containers\ICategoryTreeContainerFactory, 'CategoryTreeContainer', {priority: 30})
+
     # Forms
     CreateArticleForm:
         setup:
