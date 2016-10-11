@@ -1,27 +1,22 @@
 services:
-    - Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Forms\ICategoryTreeFormContainerFactory
-
     # Events
-    - {class: Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Events\CategoryListener, tags: [run]}
+#    - {class: Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Events\CategoryListener, tags: [run]}
     - {class: Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Events\ArticleListCategoryListener, tags: [run]}
 
+
+    # Forms
     Admin.ArticleFormBuilder:
         setup:
             - add(@Wame\CategoryModule\Forms\Containers\ICategoryTreeContainerFactory, 'CategoryTreeContainer', {priority: 30})
 
-    # Forms
-    CreateArticleForm:
-        setup:
-            - addFormContainer(Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
-
-    # Create category in administration form
-    EditArticleForm:
-        setup:
-            - addFormContainer(Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
-
     ArticleListForm:
         setup:
             - addFormContainer(Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Forms\CategoryTreeFormContainer(), 'CategoryTreeFormContainer', 50)
+
+
+    # Form containers
+    - Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Forms\ICategoryTreeFormContainerFactory
+
 
     # Grids
     ArticleGrid:
