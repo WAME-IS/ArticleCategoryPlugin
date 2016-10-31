@@ -19,6 +19,6 @@ services:
 
 
     # Grids
-    ArticleGrid:
+    Admin.ArticleGrid:
         setup:
             - add(Wame\CategoryModule\Grids\GroupActions\AddCategorySelected(), null, {priority: 90})
