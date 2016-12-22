@@ -7,7 +7,7 @@ services:
     # Forms
     Admin.ArticleFormBuilder:
         setup:
-            - add(@Wame\CategoryModule\Forms\Containers\ICategoryTreeContainerFactory, 'CategoryTreeContainer', {priority: 30})
+            - add(@Wame\CategoryModule\Forms\Containers\ICategorySelectedContainerFactory, 'CategorySelectedContainer', {priority: 30})
 
     ArticleListForm:
         setup:
