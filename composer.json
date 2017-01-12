@@ -10,9 +10,12 @@
         }
     ],
     "require": {
-        "wame/Core": "*",
         "wame/ArticleModule": "*",
         "wame/CategoryModule": "*"
+    },
+    "softRequire": {
+        "wame/AdminModule": "*",
+        "wame/MenuModule": "*"
     },
     "autoload": {
         "classmap": [
