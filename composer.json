@@ -10,8 +10,9 @@
         }
     ],
     "require": {
-        "wame/ArticleModule": "*",
-        "wame/CategoryModule": "*"
+        "wame/ArticleModule": ">=0.0.1",
+        "wame/CategoryModule": ">=0.0.1",
+        "wame/EntityModifier": ">=0.0.1"
     },
     "softRequire": {
         "wame/AdminModule": "*",
