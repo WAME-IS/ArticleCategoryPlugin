@@ -4,12 +4,15 @@ namespace Wame\ArticleCategoryPlugin\Vendor\Wame\AdminModule\Forms;
 
 use Wame\CategoryModule\Repositories\CategoryRepository;
 use Wame\CategoryModule\Repositories\CategoryItemRepository;
+use Wame\Utils\HttpRequest;
+
 
 interface ICategoryTreeFormContainerFactory
 {
 	/** @return CategoryTreeFormContainer */
 	public function create();
 }
+
 
 class CategoryTreeFormContainer extends \Wame\CategoryModule\Forms\CategoryTreeFormContainer
 {
@@ -19,7 +22,7 @@ class CategoryTreeFormContainer extends \Wame\CategoryModule\Forms\CategoryTreeF
 	public function __construct(
         CategoryRepository $categoryRepository, 
         CategoryItemRepository $categoryItemRepository, 
-        \Wame\Utils\HttpRequest $httpRequest
+        HttpRequest $httpRequest
     ) {
 		parent::__construct($categoryRepository, $categoryItemRepository, $httpRequest);
 		
