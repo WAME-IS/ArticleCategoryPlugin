@@ -1,5 +1,5 @@
 {
-    "name": "wame/ArticleCategoryPlugin",
+    "name": "wameis/ArticleCategoryPlugin",
     "version": "0.0.1",
     "description": "CMS WAME admin Article Category Bar",
     "homepage": "http://wame.sk/cms-wame-admin",
@@ -10,13 +10,13 @@
         }
     ],
     "require": {
-        "wame/ArticleModule": ">=0.0.1",
-        "wame/CategoryModule": ">=0.0.1",
-        "wame/EntityModifier": ">=0.0.1"
+        "wameis/ArticleModule": ">=0.0.1",
+        "wameis/CategoryModule": ">=0.0.1",
+        "wameis/EntityModifier": ">=0.0.1"
     },
     "softRequire": {
-        "wame/AdminModule": "*",
-        "wame/MenuModule": "*"
+        "wameis/AdminModule": "*",
+        "wameis/MenuModule": "*"
     },
     "autoload": {
         "classmap": [
